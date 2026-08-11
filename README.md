@@ -35,3 +35,14 @@ whiteboard/
 │   └── app.js              # Drawing engine: tools, shapes, text, export
 └── README.md
 ```
+## Setup & Running
+
+1. Download/clone this folder.
+2. Open `index.html` directly in a browser, or serve it locally:
+   ```bash
+   cd whiteboard
+   python -m http.server 8000
+   ```
+3. Visit `http://localhost:8000` (or just open the file) and start drawing.
+
+## How It Works
