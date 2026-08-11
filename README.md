@@ -46,3 +46,21 @@ whiteboard/
 3. Visit `http://localhost:8000` (or just open the file) and start drawing.
 
 ## How It Works
+
+1. **Drawing**: mouse/touch events on the `<canvas>` capture pointer position; the pen and eraser tools draw continuous strokes via `lineTo`/`stroke`, while shape tools (line, rect, circle, arrow) redraw a live preview on every `mousemove` by restoring a pre-drag snapshot (`getImageData`) and drawing the shape fresh — so the preview doesn't smear.
+2. **Text**: clicking with the text tool overlays a real `<input>` positioned absolutely over the canvas; on blur/Enter, the typed text is rendered onto the canvas with `fillText` and the input is removed.
+3. **Undo/Redo**: after every completed action, the canvas is serialized with `toDataURL()` and pushed onto a history stack (capped at 40 states). Undo/redo restores the corresponding snapshot with `drawImage`.
+4. **Export**: `canvas.toDataURL("image/png")` is used to trigger a PNG download via a temporary `<a download>` link.
+5. **Resizing**: on window resize, the current canvas content is preserved (via `getImageData`/`putImageData`) before the canvas is resized and redrawn, so in-progress work isn't lost.
+
+## Possible Extensions
+
+- Shape selection + move/resize after drawing (not just draw-once)
+- Multi-layer support
+- Save/load board state to `localStorage` so work persists across reloads
+- Real-time collaborative drawing via WebSockets
+- Sticky notes / image insertion
+
+## License
+
+Free to use for academic/educational purposes.
