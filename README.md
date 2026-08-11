@@ -55,6 +55,8 @@ whiteboard/
 
 
 # Screenshots
+![alt text](image.png)
+
 ## Possible Extensions
 
 - Shape selection + move/resize after drawing (not just draw-once)
