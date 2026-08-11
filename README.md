@@ -53,6 +53,8 @@ whiteboard/
 4. **Export**: `canvas.toDataURL("image/png")` is used to trigger a PNG download via a temporary `<a download>` link.
 5. **Resizing**: on window resize, the current canvas content is preserved (via `getImageData`/`putImageData`) before the canvas is resized and redrawn, so in-progress work isn't lost.
 
+
+# Screenshots
 ## Possible Extensions
 
 - Shape selection + move/resize after drawing (not just draw-once)
