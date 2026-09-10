@@ -59,7 +59,7 @@ whiteboard/
 
 ## Possible Extensions
 
-- Shape selection + move/resize after drawing (not just draw-once)
+- Shape selection + after drawing (not just draw-once)
 - Multi-layer support
 - Save/load board state to `localStorage` so work persists across reloads
 - Real-time collaborative drawing via WebSockets
