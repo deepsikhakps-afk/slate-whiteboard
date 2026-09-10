@@ -51,7 +51,7 @@ whiteboard/
 2. **Text**: clicking with the text tool overlays a real `<input>` positioned absolutely over the canvas; on blur/Enter, the typed text is rendered onto the canvas with `fillText` and the input is removed.
 3. **Undo/Redo**: after every completed action, the canvas is serialized with `toDataURL()` and pushed onto a history stack (capped at 40 states). Undo/redo restores the corresponding snapshot with `drawImage`.
 4. **Export**: `canvas.toDataURL("image/png")` is used to trigger a PNG download via a temporary `<a download>` link.
-5. **Resizing**: on window resize, the current canvas content is preserved (via `getImageData`/`putImageData`) before the canvas is resized and redrawn, so in-progress work isn't lost.
+5. **Resizing**: on window resize, the current canvas content is preserved (via `getImageData`/`putImageData`) before the canvas is resized and redrawn, so i work isn't lost.
 
 
 # Screenshots
